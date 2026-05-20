@@ -10,15 +10,14 @@ class ContactController extends Controller
 {
     public function index()
     {
-        $address = Link::where('name', 'address')->value('url') ?? '#';
-        $email =  Link::where('name', 'email')->value('url') ?? '#';
-        $phone =  Link::where('name', 'wa')->value('url') ?? '#';
-        $formattedNumber = $this->formatPhone($phone);
+        $address = 'Jl. Bypass Ngurah Rai No. 100, Sanur, Denpasar, Bali';
+        $email = 'info@traveler.com';
+        $phone = '+62 812-3456-7890';
 
         return view('contact', [
             'address' => $address,
             'email' => $email,
-            'phone' => $formattedNumber 
+            'phone' => $phone 
         ]);
     }
 

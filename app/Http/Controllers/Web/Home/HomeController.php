@@ -58,10 +58,7 @@ class HomeController extends Controller
             'message'  => 'required|string|max:1000',
         ]);
 
-        $waNumber = Link::query()
-            ->where('name', 'wa')
-            ->pluck('url')
-            ->first(); 
+        $waNumber = '6281234567890'; 
 
         $text = "Hello, my name is *{$validated['fullname']}*.\n"
               . "Phone: {$validated['phone']}\n"
@@ -77,10 +74,7 @@ class HomeController extends Controller
 
     public function redirectToWhatsapp()
     {
-        $phone = Link::query()
-            ->where('name', 'wa')
-            ->pluck('url')
-            ->first(); 
+        $phone = '6281234567890'; 
 
         $url = "https://wa.me/{$phone}";
 

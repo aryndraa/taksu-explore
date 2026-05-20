@@ -70,10 +70,7 @@ class ShuttleController extends Controller
         . "Please confirm my booking. Thank you!";
 
 
-        $adminPhone = Link::query()
-            ->where('name', 'wa')
-            ->pluck('url')
-            ->first(); 
+        $adminPhone = '6281234567890'; 
         $waUrl = 'https://wa.me/' . $adminPhone . '?text=' . urlencode($message);
 
         return redirect()->away($waUrl);

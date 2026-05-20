@@ -15,10 +15,7 @@ class VehicleRentAction extends Component
 
     public function __construct()
     {
-        $this->whatsappNumber = Link::query()
-            ->where('name', 'wa')
-            ->pluck('url')
-            ->first(); 
+        $this->whatsappNumber = '6281234567890'; 
     } 
 
     public function updateVehicleType()

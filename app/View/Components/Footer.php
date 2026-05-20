@@ -20,10 +20,10 @@ class Footer extends Component
      */
     public function __construct()
     {
-        $this->number = Link::where('name', 'wa')->value('url') ?? '#';
-        $this->address = Link::where('name', 'address')->value('url') ?? "#";
-        $this->instagram = Link::where('name', 'instagram')->value('url') ?? "#";
-        $this->formattedNumber = $this->formatPhone($this->number);
+        $this->number = '6281234567890';
+        $this->address = 'Jl. Bypass Ngurah Rai No. 100, Sanur, Denpasar, Bali';
+        $this->instagram = 'https://www.instagram.com/';
+        $this->formattedNumber = '+62 812-3456-7890';
     }
 
     private function formatPhone(string $number): string

@@ -17,9 +17,9 @@ class SocialMedia extends Component
     public function __construct($type = 'default')
     {   
         $this->type = $type;
-        $this->instagramUrl = Link::where('name', 'instagram')->value('url') ?? '#';
-        $this->email = Link::where('name', 'email')->value('url') ?? '#';
-        $this->phone = Link::where('name', 'wa')->value('url') ?? '#';
+        $this->instagramUrl = 'https://www.instagram.com/';
+        $this->email = 'info@traveler.com';
+        $this->phone = '6281234567890';
     }
 
     public function render(): View|Closure|string

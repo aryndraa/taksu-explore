@@ -32,7 +32,7 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
-            ->brandName('Explore Vista Bali')
+            ->brandName('Taksu Explore')
             ->userMenuItems([
                 'agent' => MenuItem::make()
                     ->label('Travel Agents')

@@ -75,10 +75,7 @@ class TourPackageController extends Controller
             . "*People:* {$booking->people_amount}\n\n"
             . "Please confirm my booking. Thank you!";
 
-        $adminPhone = Link::query()
-            ->where('name', 'wa')
-            ->pluck('url')
-            ->first(); 
+        $adminPhone = '6281234567890'; 
 
         $waUrl = 'https://wa.me/' . $adminPhone . '?text=' . urlencode($message);
 

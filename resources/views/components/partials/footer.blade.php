@@ -10,7 +10,7 @@
             ></iframe>
         </div>
 
-        <div class="sm:ml-5 sm:py-5 lg:col-span-3">
+        <div class="sm:ml-5 sm:py-5 lg:col-span-full">
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 mb-10">
                 <div>
                     <p>

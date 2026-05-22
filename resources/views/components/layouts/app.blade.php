@@ -54,7 +54,7 @@
         <div class="flex flex-col items-center gap-4">
             <img src="{{ asset('img/taksu_explore_logo.png') }}" alt="Taksu Explore" class="h-28 w-auto animate-pulse" />
         </div>
-    </div>
+    </div> --}}
 
     @include ('components.partials.header', ['variant' => $variant ?? 'light'])
 

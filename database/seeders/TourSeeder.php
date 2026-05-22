@@ -13,15 +13,15 @@ class TourSeeder extends Seeder
      */
     public function run(): void
     {
-        Tour::factory()->create([
+        Tour::firstOrCreate([
             'name' => 'activities'
         ]);
 
-        Tour::factory()->create([
+        Tour::firstOrCreate([
             'name' => 'half-day'
         ]);
         
-        Tour::factory()->create([
+        Tour::firstOrCreate([
             'name' => 'full-day'
         ]);
     }

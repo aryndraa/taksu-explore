@@ -14,6 +14,6 @@ class TourBookingSeeder extends Seeder
      */
     public function run(): void
     {
-        TourBooking::factory()->count(100)->create();
+        TourBooking::factory()->count(96)->create();
     }
 }

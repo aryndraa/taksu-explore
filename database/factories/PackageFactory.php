@@ -10,11 +10,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class PackageFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
     public function definition(): array
     {
         return [
@@ -22,8 +17,8 @@ class PackageFactory extends Factory
             'name'        => $this->faker->sentence(3),
             'description' => $this->faker->paragraph(),
             'start_time'  => $this->faker->time(),
-            'price'       => $this->faker->randomFloat(2,0,0),
-            'notes'       => $this->faker->optional()->sentence(),
+            'price'       => $this->faker->randomFloat(2, 50, 200),
+            'is_active'   => $this->faker->boolean(80), // 80% chance of being active
         ];
     }
 }

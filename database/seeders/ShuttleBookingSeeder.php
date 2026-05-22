@@ -13,6 +13,6 @@ class ShuttleBookingSeeder extends Seeder
      */
     public function run(): void
     {
-        ShuttleBooking::factory()->count(100)->create();
+        ShuttleBooking::factory()->count(46)->create();
     }
 }

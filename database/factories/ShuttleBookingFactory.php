@@ -24,7 +24,7 @@ class ShuttleBookingFactory extends Factory
             'customer_name'   => $this->faker->name(),
             'customer_phone'  => $this->faker->phoneNumber(),
             'customer_email'  => $this->faker->safeEmail(),
-            'booking_date'    => $this->faker->date(),
+            'booking_date'    => $this->faker->dateTimeBetween(date('Y') . '-01-01', date('Y') . '-12-31')->format('Y-m-d'),
             'pickup_time'     => $this->faker->time(),
             'people_amount'   => $this->faker->numberBetween(1, 10),
             'from'            => $this->faker->city(),

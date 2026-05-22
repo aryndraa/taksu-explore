@@ -18,27 +18,31 @@
 
 @section ('content')
     {{-- ? HERO SECTION --}}
-    <section class="relative min-h-[100dvh] flex items-end pb-20 2xl:pb-28 text-white">
-        <div class="absolute inset-y-0 -inset-x-20 bg-black -z-20 min-h-[100dvh]">
+    <section
+        class="relative min-h-screen flex items-center lg:items-end pt-28 pb-16 lg:pt-0 lg:pb-20 2xl:pb-28 text-white overflow-hidden"
+    >
+        <div class="absolute inset-0 bg-black -z-20">
             <video
                 autoplay
                 loop
-                class="opacity-50 h-full w-full object-cover min-h-[100dvh]"
+                muted
+                playsinline
+                class="opacity-50 h-full w-full object-cover"
                 src="{{ asset('video/1013.mp4') }}"
             ></video>
         </div>
 
         <div
-            class="flex flex-col lg:flex-row w-full justify-between gap-20 items-center lg:items-end px-8 container mx-auto"
+            class="flex flex-col lg:flex-row w-full justify-between gap-8 sm:gap-12 lg:gap-20 items-center lg:items-end px-8 container mx-auto h-[60vh]"
             data-aos="fade-up"
         >
-            <div class="flex flex-col items-center md:items-start">
+            <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
                 <p
-                    class="text-start md:text-center text-gray-200 py-2 px-4 rounded-md text-base w-fit font-inter italic mb-1 backdrop-blur-[10px] backdrop-saturate-[165%] bg-[rgba(160,160,160,0.2)] border border-[rgba(255,255,255,0.125)]"
+                    class="text-gray-200 py-1.5 px-3.5 rounded-md text-sm w-fit font-inter italic mb-3 backdrop-blur-[10px] backdrop-saturate-[165%] bg-[rgba(160,160,160,0.2)] border border-[rgba(255,255,255,0.125)] mx-auto lg:mx-0"
                 >Welcome to Bali, Indonesia</p>
 
                 <h1
-                    class="text-center md:text-start font-roboto font-semibold text-4xl md:text-5xl 2xl:text-6xl max-w-lg 2xl:max-w-2xl leading-snug mb-10"
+                    class="font-roboto font-semibold text-5xl lg:text-5xl 2xl:text-6xl max-w-lg 2xl:max-w-2xl leading-tight mb-6 lg:mb-8"
                 >
                     Get to know <span class="font-playfair italic">Bali</span> with Taksu Explore!
                 </h1>
@@ -47,22 +51,24 @@
                     href="{{ route('services.available-packages') }}"
                     firstTextClasses="text-cst-yellow-400 font-inter font-medium"
                     secondTextClasses="text-black font-playfair font-bold italic"
-                    class="text-xl w-fit py-1.5 px-5 bg-transparent border-2 border-cst-yellow-400 rounded-sm hover:bg-cst-yellow-400"
+                    class="text-sm sm:text-base lg:text-lg w-fit py-1.5 px-4 bg-transparent border border-cst-yellow-400 rounded-sm hover:bg-cst-yellow-400 mx-auto lg:mx-0"
                 >
                     Lets Explore!
                 </x-wave-button>
             </div>
 
-            <div class="flex flex-col items-center lg:items-end">
-                <div class="bg-white text-black p-4 font-inter rounded-sm mb-4 w-full lg:max-w-sm">
-                    <p class="text-base mb-4">“This service is great! I love it, I would recommend this to my relatives”</p>
-                    <div class="">
-                        <h4 class="text-base font-roboto leading-tight font-medium italic">Jackson Harry</h4>
-                        <a href="#" class="text-sm text-gray-500">@loremipsum</a>
+            <div class="flex flex-col items-center lg:items-end w-full sm:max-w-md lg:max-w-sm">
+                <div class="bg-white text-black p-4 sm:p-5 font-inter rounded-md mb-4 lg:mb-6 w-full shadow-2xl">
+                    <p class="text-xs sm:text-sm lg:text-base mb-3 leading-relaxed">“This service is great! I love it, I would recommend this to my relatives”</p>
+                    <div>
+                        <h4 class="text-sm sm:text-base font-roboto leading-tight font-semibold italic">
+                            Jackson Harry
+                        </h4>
+                        <a href="#" class="text-xs sm:text-sm text-gray-500">@loremipsum</a>
                     </div>
                 </div>
-                <div class="flex items-center gap-5">
-                    <p class="font-playfair italic font-medium text-2xl text-white">Follow our socials</p>
+                <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-5 justify-center lg:justify-end w-full">
+                    <p class="font-playfair italic font-medium text-lg sm:text-xl lg:text-2xl text-white whitespace-nowrap text-center">Follow our socials</p>
                     <x-social-media />
                 </div>
             </div>

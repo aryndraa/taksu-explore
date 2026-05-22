@@ -17,13 +17,16 @@ class VehicleRentalFactory extends Factory
      */
     public function definition(): array
     {
+        $rentalDate = $this->faker->dateTimeBetween(date('Y') . '-01-01', date('Y') . '-12-31');
+        $returnDate = (clone $rentalDate)->modify('+' . $this->faker->numberBetween(1, 14) . ' days');
+
         return [
             'customer_name'  => $this->faker->name(),
             'customer_phone' => $this->faker->phoneNumber(),
             'customer_email' => $this->faker->optional()->safeEmail(),
             'vehicle_id'     => Vehicle::query()->inRandomOrder()->first()->id,
-            'rental_date'    => $this->faker->date(),
-            'return_date'    => $this->faker->date(),
+            'rental_date'    => $rentalDate->format('Y-m-d'),
+            'return_date'    => $returnDate->format('Y-m-d'),
             'status'         => $this->faker->randomElement(['pending', 'confirmed', 'cancelled', 'completed', 'ongoing', 'expired']),
         ];
     }
